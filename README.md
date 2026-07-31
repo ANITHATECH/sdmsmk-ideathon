@@ -35,13 +35,6 @@ export SECRET_KEY="a-long-random-string"
 python app.py
 ```
 
-Visit http://127.0.0.1:5000
-
-- Admin login: default username `admin`, password `admin@123` (change via env vars above).
-- Student / Organizing Team / Judge accounts self-register and need **admin approval**
-  before judges can log in (students/org can log in immediately but dashboards show
-  "pending" status until approved).
-
 ## 4. Flow
 
 1. Student scans the QR / clicks **Register Now**, fills the form, pays the fee, creates a login.
