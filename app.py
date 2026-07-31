@@ -143,6 +143,34 @@ def index():
     )
 
 
+@app.route("/contact")
+def contact():
+    staff_coordinators = [
+        {"name": "S. Gokila", "role": "Lecturer, Department of Computer Science", "phone": "99441 30943"},
+        {"name": "P. Meghana Durga", "role": "Lecturer, Department of Computer Science", "phone": "90144 79634"},
+        {"name": "N. Yamini Babitha", "role": "Lecturer, Department of Electronics", "phone": "70328 51740"},
+    ]
+    patrons = [
+        {"name": "Dr. P. V. Durgavathi", "role": "Principal"},
+        {"name": "Smt. M. Praveena", "role": "Convenor, HOD Department of Computer Science"},
+        {"name": "Kum. J. Parasmal Kanti", "role": "HOD, Department of Electronics"},
+        {"name": "V. Siva Krishnaveni", "role": "Co-Convenor, Asst. Professor, Computer Science"},
+        {"name": "P. Harika", "role": "Assistant Professor, Department of Computer Science"},
+        {"name": "Ch. Manohari", "role": "Lecturer, Department of Electronics"},
+    ]
+    company_contacts = [
+        {"name": "V. Uma Manikanta", "role": "CEO & Director, Anitha Technologies & Services", "phone": "91823 65899"},
+        {"name": "Anitha Technologies & Services", "role": "Event Organizing Company — General Enquiries", "phone": "72076 60201"},
+    ]
+    return render_template(
+        "contact.html",
+        staff_coordinators=staff_coordinators,
+        patrons=patrons,
+        company_contacts=company_contacts,
+        event_date=EVENT_DATE,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Student: register / login / dashboard
 # ---------------------------------------------------------------------------
